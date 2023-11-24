@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      for(int i = 0; i < n; i++)
+      {
+        for(int j = 0; j < n; j++)
+        {
+          int t1 = n - i;
+          int t2 = n - j;
+          int max_1 = Math.max(t1, t2);
+          int t3 = i + 1;
+          int t4 = j + 1;
+          int max_2 = Math.max(t3, t4);
+          System.out.print(Math.max(max_1, max_2)); 
+        }
+        System.out.println();
+      }
+  }
+}
