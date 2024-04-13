@@ -1,0 +1,51 @@
+Print the following pattern
+
+Input Format
+
+Look at the sample input and output
+
+Constraints
+
+.Look at the sample input and output
+
+Output Format
+
+Look at the sample input and output
+
+Sample Input 0
+
+5
+Sample Output 0
+
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+============================================================================================================
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int n=z.nextInt();
+        int t=1;
+        for(int i=0;i<n;i++)
+        {
+            for(int s=1;s<n-i;s++)
+                System.out.print(" ");
+            for(int j=0;j<=i;j++)
+            {
+                if(j==0||j==i)
+                    t=1;
+                else
+                    t=t*(i-j+1)/j;
+                System.out.printf("%d ", t); 
+            }
+             System.out.println();
+        }
+     
+    }
+}
